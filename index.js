@@ -23,14 +23,16 @@ chat.connect().then(function() {
                 chat.getUsersInChannel(channel.id).then(function(users) {
                     return users;
                 }).then(function(users) {
-                    chat.addToIgnoreList(users[0].id).then(function(ignoreList) {
+                    setTimeout(function() {                 
+                    chat.addToIgnoreList(78214).then(function(ignoreList) {
                         console.log("ignoreList");
                         console.log(ignoreList);
                         return ignoreList;
                     }).catch(function(err) {
                         console.log("ERROR");
                         console.log(err);
-                    });      
+                    }); 
+                 }, 5000);
                 });  
             });
         });            
